@@ -1,0 +1,84 @@
+site_name: Pydantic Handbook
+site_url: https://leninjoseph.github.io/pydantic-handbook/
+site_description: A practical, example-driven guide to Pydantic v2 for backend and AI engineering.
+site_author: Lenin Joseph
+repo_url: https://github.com/LeninJoseph/pydantic-handbook
+repo_name: LeninJoseph/pydantic-handbook
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - search.highlight
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - Basics:
+      - Introduction: basics/index.md
+      - What Is Pydantic: basics/introduction.md
+      - Installation: basics/installation.md
+      - Your First Model: basics/first_model.md
+      - Fields: basics/fields.md
+      - Validation Errors: basics/validation_errors.md
+      - Strict vs Lax Mode: basics/strict_mode.md
+      - Nested Models: basics/nested_models.md
+  - Advanced:
+      - Introduction: advanced/index.md
+      - Validators: advanced/validators.md
+      - Computed Fields: advanced/computed_fields.md
+      - Serialization: advanced/serialization.md
+      - Aliases: advanced/aliases.md
+      - Model Config: advanced/model_config.md
+      - Annotated Types: advanced/annotated_types.md
+      - Unions: advanced/unions.md
+      - Generic Models: advanced/generic_models.md
+      - TypeAdapter: advanced/type_adapter.md
+      - validate_call: advanced/validate_call.md
+      - Dataclasses & TypedDict: advanced/dataclasses_typeddict.md
+  - Production:
+      - Introduction: production/index.md
+      - Settings Management: production/settings.md
+      - JSON Schema: production/json_schema.md
+      - FastAPI: production/fastapi.md
+      - Performance: production/performance.md
+  - AI Engineering:
+      - Introduction: ai_engineering/index.md
+      - LLM Structured Outputs: ai_engineering/llm_structured_outputs.md
+  - Reference:
+      - Introduction: reference/index.md
+      - Migrating v1 to v2: reference/migration_v1_v2.md
+      - Common Pitfalls: reference/common_pitfalls.md
+      - Cheat Sheet: reference/cheat_sheet.md
+  - Interview Questions: interview/interview_questions.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
