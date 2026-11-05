@@ -2,7 +2,7 @@
 
 A practical, example-driven guide to **Pydantic v2**, from your first model to settings management, FastAPI integration and structured outputs for LLM / AI engineering.
 
-**📖 Read it online: https://leninjoseph.github.io/pydantic-handbook/**
+Start reading at [docs/index.md](docs/index.md).
 
 ## Contents
 
@@ -49,14 +49,4 @@ Every Python example in `docs/` is executed in CI. To run them locally:
 ```
 pip install -r requirements-examples.txt
 python scripts/check_examples.py docs
-```
-
-## Deploy
-
-Pushing to `main` runs the examples and then deploys the site to GitHub Pages automatically (`.github/workflows/deploy.yml`).
-
-To deploy manually:
-
-```
-mkdocs gh-deploy
 ```
