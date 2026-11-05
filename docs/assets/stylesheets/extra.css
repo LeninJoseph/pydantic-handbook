@@ -1,0 +1,171 @@
+/* ---------- Brand palette ---------- */
+:root,
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #e92063;
+  --md-primary-fg-color--light: #f25a8b;
+  --md-primary-fg-color--dark: #b3164a;
+  --md-accent-fg-color: #7c3aed;
+  --md-typeset-a-color: #c8175a;
+  --hb-gradient: linear-gradient(135deg, #e92063 0%, #a21caf 55%, #6d28d9 100%);
+  --hb-card-bg: #ffffff;
+  --hb-card-border: #f1d5df;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #e92063;
+  --md-primary-fg-color--light: #f25a8b;
+  --md-primary-fg-color--dark: #b3164a;
+  --md-accent-fg-color: #a78bfa;
+  --md-typeset-a-color: #ff6b9a;
+  --md-default-bg-color: #15111c;
+  --md-code-bg-color: #1e1828;
+  --hb-gradient: linear-gradient(135deg, #be185d 0%, #7e22ce 55%, #4c1d95 100%);
+  --hb-card-bg: #1d1726;
+  --hb-card-border: #34283f;
+}
+
+/* ---------- Header & tabs ---------- */
+.md-header,
+.md-tabs {
+  background: var(--hb-gradient);
+}
+.md-header {
+  box-shadow: none;
+}
+.md-tabs__link {
+  font-weight: 600;
+  opacity: 0.85;
+}
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  opacity: 1;
+}
+
+/* ---------- Typography ---------- */
+.md-typeset {
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+.md-typeset h1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--md-default-fg-color);
+}
+.md-typeset h2 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid var(--hb-card-border);
+}
+.md-typeset h3 {
+  font-weight: 650;
+}
+
+/* ---------- Code ---------- */
+.md-typeset pre > code {
+  border-radius: 10px;
+}
+.md-typeset .highlight {
+  border-left: 3px solid var(--md-primary-fg-color);
+  border-radius: 10px;
+}
+.md-typeset :not(pre) > code {
+  border-radius: 5px;
+  padding: 0.1em 0.35em;
+  color: var(--md-typeset-a-color);
+}
+
+/* ---------- Tables ---------- */
+.md-typeset table:not([class]) {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--hb-card-border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+.md-typeset table:not([class]) th {
+  background: var(--md-primary-fg-color);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ---------- Admonitions ---------- */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 10px;
+  border-width: 0 0 0 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+.md-typeset details.question {
+  border-color: var(--md-primary-fg-color);
+}
+.md-typeset .question > summary {
+  background-color: color-mix(in srgb, var(--md-primary-fg-color) 10%, transparent);
+  font-weight: 600;
+}
+.md-typeset .question > summary::before {
+  background-color: var(--md-primary-fg-color);
+}
+
+/* ---------- Home hero ---------- */
+.hb-hero {
+  background: var(--hb-gradient);
+  color: #fff;
+  border-radius: 18px;
+  padding: 2.6rem 2.2rem;
+  margin: 0 0 2rem;
+  box-shadow: 0 10px 30px rgba(162, 28, 175, 0.25);
+}
+.md-typeset .hb-hero h1 {
+  color: #fff;
+  font-size: 2.3rem;
+  margin: 0 0 0.6rem;
+}
+.hb-hero p {
+  font-size: 0.95rem;
+  opacity: 0.92;
+  max-width: 40rem;
+}
+.md-typeset .hb-hero .md-button {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.7);
+  margin: 0.4rem 0.4rem 0 0;
+}
+.md-typeset .hb-hero .md-button--primary,
+.md-typeset .hb-hero .md-button--primary:focus {
+  background: #fff !important;
+  color: #9d0f42 !important;
+  border-color: #fff !important;
+}
+.md-typeset .hb-hero .md-button:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+.md-typeset .hb-hero .md-button--primary:hover {
+  background: #ffe4ee;
+  color: #b3164a;
+}
+
+/* ---------- Cards ---------- */
+.md-typeset .grid.cards > ul > li {
+  background: var(--hb-card-bg);
+  border: 1px solid var(--hb-card-border);
+  border-radius: 14px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.md-typeset .grid.cards > ul > li:hover {
+  transform: translateY(-3px);
+  border-color: var(--md-primary-fg-color);
+  box-shadow: 0 8px 22px rgba(233, 32, 99, 0.15);
+}
+.md-typeset .grid.cards .lg {
+  color: var(--md-primary-fg-color);
+}
+
+@media screen and (max-width: 44.9375em) {
+  .hb-hero {
+    padding: 1.8rem 1.3rem;
+  }
+  .md-typeset .hb-hero h1 {
+    font-size: 1.7rem;
+  }
+}
